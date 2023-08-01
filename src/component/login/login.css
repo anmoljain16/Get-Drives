@@ -1,0 +1,15 @@
+/* Login.css */
+
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form h1 {
+    text-align: center; 
+  }
+  
+  /* Other styles */
