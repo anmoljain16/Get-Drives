@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "app.js": {
+      "memory": 1024,
+     
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "app.js"
+    }
+  ]
+}
