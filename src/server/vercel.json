@@ -1,14 +1,15 @@
 {
-  "functions": {
-    "app.js": {
-      "memory": 1024,
-     
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "app.js"
+      "src": "app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "app.js" 
     }
   ]
 }
