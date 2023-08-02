@@ -1,8 +1,5 @@
-// Login.jsx
-
-import { useState } from 'react'; 
+import { useState } from 'react';
 import axios from 'axios';
-
 
 export default function Login({ onLogin }) {
   const [id, setId] = useState('');
@@ -12,17 +9,19 @@ export default function Login({ onLogin }) {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://drive-api.onrender.com/api/login', {
         id,
-        password  
+        password,
       });
-      console.log(response.data)
-    //   onLogin(response.data);
+
+      console.log(response.data);
+      setId("")
+      setPassword("")
+      onLogin(); // Call the callback function to notify successful login
     } catch (error) {
       console.error(error);
     }
-  }
-
+  };
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
@@ -30,19 +29,15 @@ export default function Login({ onLogin }) {
 
       <label>
         Username:
-        <input 
-          type="text" 
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        />
+        <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
       </label>
 
       <label>
-        Password: 
+        Password:
         <input
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)} 
+          onChange={(e) => setPassword(e.target.value)}
         />
       </label>
 
