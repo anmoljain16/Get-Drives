@@ -1,194 +1,38 @@
-/* DriveList.css
-
-.drive-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.drive-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.drive-card h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.drive-card p {
-  font-size: 14px;
-  margin-bottom: 4px;
-} */
-
-/* DriveList.css */
 .drive-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 .company-list {
   flex: 1;
-}
-
-.company-item {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.company-item h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.company-item p {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.drive-details {
-  flex: 2;
-  margin-left: 16px;
-}
-
-.drive-details iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
-
-
-/* DriveList.css */
-.drive-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.company-list {
-  flex: 1;
-  width: 100%;
-}
-
-.company-item {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-.company-item h2 {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.company-item p {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.drive-details {
-  flex: 2;
-  margin-left: 16px;
-}
-
-.drive-details iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
-
-/* Mobile-friendly styles */
-@media screen and (max-width: 768px) {
-  .drive-container {
-    flex-direction: column;
-  }
-  
-  .drive-details {
-    margin-left: 0;
-    margin-top: 16px;
-  }
-
-  .drive-details iframe {
-    height: 300px;
-  }
-}
-
-/* DriveList.css */
-.drive-container {
-  display: flex;
-  
-}
-
-.company-list {
-  flex: 1;
-  width: 30%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
   overflow-y: auto;
-  margin-top: 55px;
+  max-height: 100vh; /* Ensures the list can scroll but not exceed the viewport height */
+  padding-right: 10px;
 }
 
 .company-item {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .company-item h2 {
+  margin-top: 0;
   font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.company-item p {
-  font-size: 14px;
-  margin-bottom: 4px;
 }
 
 .drive-details {
   flex: 2;
-  margin-left: 30%;
-  padding: 16px;
-  box-sizing: border-box;
-}
+  padding: 10px;
+  margin-left: 10%;}
 
 .drive-details iframe {
-  width: 100%;
-  
+  width: calc(100vh - 40px);
+  height: calc(100vh - 40px); /* Subtract padding for better presentation */
   border: none;
 }
-
-/* Mobile-friendly styles */
-@media screen and (max-width: 768px) {
-  .drive-container {
-    flex-direction: column;
-  }
-
-  .company-list {
-    width: 100%;
-    position: static;
-    overflow-y: visible;
-  }
-
-  .drive-details {
-    margin-left: 0;
-  }
-
-  .drive-details iframe {
-    height: 300px;
-  }
-}
-
-
